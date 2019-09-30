@@ -48,6 +48,7 @@ Application JEE qui permet de gérer des comptes bancaire avec Spring Boot JPA H
 					La couche web :
 					Les contrôleurs Spring MVC.
 					Les Vue basée sur Thymeleaf.
+					
 			•	Sécuriser l’application en utilisant un système d’authentification basé sur Spring Security.
 
 			•	Chaque compte est défini un code, un solde et une date de création.
