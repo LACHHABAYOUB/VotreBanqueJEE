@@ -2,14 +2,6 @@
 
 Application JEE qui permet de gérer des comptes bancaire avec Spring Boot JPA Hibernate Restful SOAP RMI AngularJS
 
-•	Chaque compte est défini un code, un solde et une date de création.
-•	Un compte courant est un compte qui possède en plus un découvert.
-•	Un compte épargne est un compte qui possède en plus un taux d’intérêt.
-•	Chaque compte appartient à un client.
-•	Chaque client est défini par son code et son nom.
-•	Chaque compte peut subir plusieurs opérations.
-•	Il existe deux types d’opérations : Versement et Retrait.
-•	Une opération est définie par un numéro, une date et un montant.
 
 -	Exigences fonctionnelles:
 		L’application doit permettre de :
@@ -57,3 +49,12 @@ Application JEE qui permet de gérer des comptes bancaire avec Spring Boot JPA H
 					Les contrôleurs Spring MVC.
 					Les Vue basée sur Thymeleaf.
 			•	Sécuriser l’application en utilisant un système d’authentification basé sur Spring Security.
+
+			•	Chaque compte est défini un code, un solde et une date de création.
+			•	Un compte courant est un compte qui possède en plus un découvert.
+			•	Un compte épargne est un compte qui possède en plus un taux d’intérêt.
+			•	Chaque compte appartient à un client.
+			•	Chaque client est défini par son code et son nom.
+			•	Chaque compte peut subir plusieurs opérations.
+			•	Une opération est définie par un numéro, une date et un montant.
+			•	Il existe deux types d’opérations : Versement et Retrait.
