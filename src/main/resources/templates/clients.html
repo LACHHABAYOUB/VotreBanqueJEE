@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorator="template1">
+<head>
+<meta charset="utf-8" />
+<title>Operations</title>
+</head>
+<body>
+	<div class="container" layout:fragment="content">
+
+			<div class="panel panel-success">
+				<div class="panel-heading">Consultation d'un compte</div>
+				<div class="panel-body">
+					<form th:action="@{/getClients}" method="get">
+						<div>
+							<label>Client:</label>
+							<input type="text" name="motCle" th:value="${motCle}" />
+							<button type="submit" class="btn btn-primary">Chercher</button>
+						</div>
+					</form>
+					<div class="text-danger" th:if="${exception}"
+						th:text="${exception.message}"></div>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">Liste des Clients</div>
+					<div class="panel-body">
+					<table class="table" th:href="@{css/bootstrap.min.css}">
+						<thead>
+							<tr>
+								<th>Code</th><th>Client</th><th>Email</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="c:${listClients}">
+								<td th:text="${c.code}"></td>
+								<td th:text="${c.nom}"></td>
+								<td th:text="${c.email}"></td>
+								<td><a onclick="return confirm('Etes vous Sure?')" th:href="@{deleteClient(id=${c.code}, page=${pageCourante}, size=${size}, motCle=${motCle})}">Supprimer</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+	</div>
+
+
+</body>
+</html>
