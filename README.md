@@ -1,61 +1,61 @@
-#VotreBanqueJEE
+#YourBankJEE
 
-Application JEE qui permet de gérer des comptes bancaire avec Spring Boot JPA Hibernate Restful SOAP RMI AngularJS
+JEE application which allows you to manage bank accounts with Spring Boot JPA Hibernate Restful SOAP RMI AngularJS
 
 
--	Exigences fonctionnelles:
-		L’application doit permettre de :
-		
-			•	Gérer des les clients :
-			
-					Ajouter un client.
-					Consulter tous les clients.
-					Consulter les clients dont le nom contient un mot clé.
-					
-			•	Gérer les comptes :
-			
-					Ajouter un compte.
-					Consulter un compte.
-			•	Gérer les opérations :
-			
-					Effectuer un versement d’un montant dans un compte.
-					Effectuer un retrait d’un montant dans un compte.
-					Effectuer un virement d’un montant d’un compte vers un autre.
-					Consulter les opérations d’un compte page par page.
-					
-		Les opérations nécessitent une opération d’authentification.
-		
-		Exigences Techniques:
+- Functional requirements:
+The application must allow to:
 
-		Les données sont stockées dans une base de données MySQL.
+• Manage clients:
 
-			•	 L’application se compose de trois couches :
-			
-					La couche DAO qui est basée sur Spring Data, JPA, Hibernate et JDBC.
-					La couche Métier.
-					La couche Web basée sur MVC coté Serveur en utilisant Thymeleaf.
-					
-					
-			•	 La sécurité est basée sur Spring Security.			
-			•	 Etablir une architecture technique du projet.
-			•	 Etablir un diagramme de classes qui montre les entités, la couche DAO et la couche métier.
-			
-			•	 On va Créer un projet SpringBoot qui contient les éléments suivants :
-					
-					Les entités.
-					La couche DAO (Interfaces Spring data).
-					La couche métier (Interfaces et implémentations).
-					La couche web :
-					Les contrôleurs Spring MVC.
-					Les Vue basée sur Thymeleaf.
-					
-			•	Sécuriser l’application en utilisant un système d’authentification basé sur Spring Security.
+Add a client.
+Consult with all customers.
+Consult customers whose name contains a keyword.
 
-			•	Chaque compte est défini un code, un solde et une date de création.
-			•	Un compte courant est un compte qui possède en plus un découvert.
-			•	Un compte épargne est un compte qui possède en plus un taux d’intérêt.
-			•	Chaque compte appartient à un client.
-			•	Chaque client est défini par son code et son nom.
-			•	Chaque compte peut subir plusieurs opérations.
-			•	Une opération est définie par un numéro, une date et un montant.
-			•	Il existe deux types d’opérations : Versement et Retrait.
+• Manage accounts:
+
+Add an account.
+Consult an account.
+• Manage operations:
+
+Make an amount payment into an account.
+Withdraw an amount from an account.
+Transfer money from one account to another.
+View account operations page by page.
+
+The operations require an authentication operation.
+
+Technical requirements:
+
+The data is stored in a MySQL database.
+
+• The application consists of three layers:
+
+The DAO layer which is based on Spring Data, JPA, Hibernate and JDBC.
+The Business layer.
+The server-side MVC-based web layer using Thymeleaf.
+
+
+• Security is based on Spring Security.
+• Establish a technical architecture for the project.
+• Establish a class diagram showing the entities, the CAD layer and the business layer.
+
+• We will create a SpringBoot project which contains the following elements:
+
+The entities.
+The DAO (Interfaces Spring data) layer.
+The business layer (Interfaces and implementations).
+The web layer:
+Spring MVC controllers.
+The Vue based on Thymeleaf.
+
+• Secure the application using an authentication system based on Spring Security.
+
+• Each account is defined with a code, a balance and a creation date.
+• A current account is an account that also has an overdraft.
+• A savings account is an account that also has an interest rate.
+• Each account belongs to a client.
+• Each client is defined by their code and name.
+• Each account can undergo several operations.
+• An operation is defined by a number, a date and an amount.
+• There are two types of transaction: Payment and Withdrawal.
